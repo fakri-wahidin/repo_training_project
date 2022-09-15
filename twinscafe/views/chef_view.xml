@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- twinscafe.chef inherit tree view -->
+    <record id="twinscafe_chef_view_tree_inherit" model="ir.ui.view">
+        <field name="name">Daftar Chef</field>
+        <field name="model">twinscafe.chef</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="twinscafe_person_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id_chef"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- twinscafe.chef inherit form view -->
+    <record id="twinscafe_chef_view_form_inherit" model="ir.ui.view">
+        <field name="name">Form Chef</field>
+        <field name="model">twinscafe.chef</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="twinscafe_person_view_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//form//sheet//group[2]" position="after">
+                <group name="id" string="ID">
+                    <field name="id_chef"/>
+                </group>
+           </xpath>
+           <xpath expr="//field[@name='alamat']" position="attributes">
+                <attribute name="string">Address</attribute>            
+           </xpath>
+        </field>
+    </record>
+    <!-- twinscafe.chef action window -->
+    <record id="twinscafe_chef_action" model="ir.actions.act_window">
+        <field name="name">Chef</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">twinscafe.chef</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="twinscafe_chef_menu_act" 
+              name="Chef" 
+              parent="twinscafe_pegawai_menu_categ" 
+              action="twinscafe_chef_action" 
+              sequence="20"/>
+
+</odoo>

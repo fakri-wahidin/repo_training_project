@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="twinscafe.list">
+      <field name="name">twinscafe list</field>
+      <field name="model">twinscafe.twinscafe</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="twinscafe.action_window">
+      <field name="name">twinscafe window</field>
+      <field name="res_model">twinscafe.twinscafe</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="twinscafe.action_server">
+      <field name="name">twinscafe server</field>
+      <field name="model_id" ref="model_twinscafe_twinscafe"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="twinscafe" id="twinscafe.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="twinscafe.menu_1" parent="twinscafe.menu_root"/>
+    <menuitem name="Menu 2" id="twinscafe.menu_2" parent="twinscafe.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="twinscafe.menu_1_list" parent="twinscafe.menu_1"
+              action="twinscafe.action_window"/>
+    <menuitem name="Server to list" id="twinscafe" parent="twinscafe.menu_2"
+              action="twinscafe.action_server"/>
+-->
+  </data>
+</odoo>

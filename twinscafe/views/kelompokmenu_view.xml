@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+    <!-- twinscafe.kelompokmenu tree view -->
+    <record id="twinscafe_kelompokmenu_view_tree" model="ir.ui.view">
+        <field name="name">twinscafe.kelompokmenu</field>
+        <field name="model">twinscafe.kelompokmenu</field>
+        <field name="arch" type="xml">
+            <tree>
+               <field name="name"/>
+               <field name="kode_kelompok"/>
+               <field name="kode_menu"/>
+               <field name="jml_item"/>
+               <field name="daftar"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- twinscafe.kelompokmenu form view -->
+    <record id="twinscafe_kelompokmenu_view_form" model="ir.ui.view">
+        <field name="name">twinscafe.kelompokmenu.view.form</field>
+        <field name="model">twinscafe.kelompokmenu</field>
+        <field name="arch" type="xml">
+            <form string="Kelompok Menu">
+                <sheet>
+                    <group name="Kelompok" string="Letak Kelompok">
+                        <field name="name"/>
+                        <field name="kode_kelompok"/>
+                        <field name="jml_item"/>
+                    </group>
+                    <group name="Menu" string="Letak Menu">
+                        <field name="kode_menu"/>
+                        <field name="menucafe_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- twinscafe.kelompokmenu action window -->
+    <record id="twinscafe_kelompokmenu_action" model="ir.actions.act_window">
+        <field name="name">Kelompok Menu</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">twinscafe.kelompokmenu</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="twinscafe_kelompokmenu_menu_act" 
+              name="Kelompok Menu" 
+              parent="twinscafe_cafe_menu_categ" 
+              action="twinscafe_kelompokmenu_action" 
+              sequence="10"/>
+
+</odoo>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- twinscafe.supplier tree view -->
+<record id="twinscafe.supplier_view_tree" model="ir.ui.view">
+    <field name="name">Daftar Supplier</field>
+    <field name="model">twinscafe.supplier</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="alamat"/>
+            <field name="no_telp"/>
+            <field name="menucafe_id"/>            
+        </tree>
+    </field>
+</record>
+
+<!-- twinscafe.supplier form view -->
+<record id="twinscafe_supplier_view_form" model="ir.ui.view">
+    <field name="name">Form Supplier</field>
+    <field name="model">twinscafe.supplier</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="alamat"/>
+                    <field name="no_telp"/>
+                </group>
+                <group name="menucafe" string="Menucafe">
+                    <field name="menucafe_id"/>                    
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+    <!-- twinscafe.supplier action window -->
+    <record id="twinscafe_supplier_action" model="ir.actions.act_window">
+        <field name="name">Daftar Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">twinscafe.supplier</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="twinscafe.supplier_menu_act" 
+                name="Supplier" 
+                parent="twinscafe_menu_root" 
+                action="twinscafe_supplier_action" 
+                sequence="40"/>
+
+
+</odoo>

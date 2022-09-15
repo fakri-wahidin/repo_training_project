@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- twinscafe.officeboy inherit tree view -->
+    <record id="twinscafe_officeboy_view_tree_inherit" model="ir.ui.view">
+        <field name="name">Daftar OfficeBoy</field>
+        <field name="model">twinscafe.officeboy</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="twinscafe_person_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id_oboy"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- twinscafe.officeboy inherit form view -->
+    <record id="twinscafe_officeboy_view_form_inherit" model="ir.ui.view">
+        <field name="name">Form OfficeBoy</field>
+        <field name="model">twinscafe.officeboy</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="twinscafe_person_view_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//form//sheet//group[2]" position="after">
+                <group name="id" string="ID">
+                    <field name="id_oboy"/>
+                </group>
+           </xpath>
+           <xpath expr="//field[@name='alamat']" position="attributes">
+                <attribute name="string">Address</attribute>            
+           </xpath>
+        </field>
+    </record>
+    <!-- wikumart.officeboy action window -->
+    <record id="twinscafe_officeboy_action" model="ir.actions.act_window">
+        <field name="name">OfficeBoy</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">twinscafe.officeboy</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="twinscafe_officeboy_menu_act" 
+              name="OfficeBoy" 
+              parent="twinscafe_pegawai_menu_categ" 
+              action="twinscafe_officeboy_action" 
+              sequence="50"/>
+
+</odoo>

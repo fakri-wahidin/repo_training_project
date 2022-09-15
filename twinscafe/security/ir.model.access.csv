@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_twinscafe_kelompokmenu,acces.twinscafe.kelompokmenu,model_twinscafe_kelompokmenu,,1,1,1,1
+access_twinscafe_menucafe,acces.twinscafe.menucafe,model_twinscafe_menucafe,,1,1,1,1
+access_twinscafe_person,acces.twinscafe.person,model_twinscafe_person,,1,1,1,1
+access_twinscafe_barista,acces.twinscafe.barista,model_twinscafe_barista,,1,1,1,1
+access_twinscafe_chef,acces.twinscafe.chef,model_twinscafe_chef,,1,1,1,1
+access_twinscafe_cashier,acces.twinscafe.cashier,model_twinscafe_cashier,,1,1,1,1
+access_twinscafe_waiters,acces.twinscafe.waiters,model_twinscafe_waiters,,1,1,1,1
+access_twinscafe_officeboy,acces.twinscafe.officeboy,model_twinscafe_officeboy,,1,1,1,1
+access_twinscafe_supplier,acces.twinscafe.supplier,model_twinscafe_supplier,,1,1,1,1
+access_twinscafe_penjualan,acces.twinscafe.penjualan,model_twinscafe_penjualan,,1,1,1,1
+access_twinscafe_detailpenjualan,acces.twinscafe.detailpenjualan,model_twinscafe_detailpenjualan,,1,1,1,1
+access_twinscafe_menucafedatang,acces.twinscafe.menucafedatang,model_twinscafe_menucafedatang,,1,1,1,1
